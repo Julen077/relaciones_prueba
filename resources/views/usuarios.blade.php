@@ -11,13 +11,15 @@
     <div class="container bg-dark">
         <div class="row">
             <div class="col-6 text-center" style="margin-left: 325px;">
-                <h1 class="text-white mb-5">Lista de tareas:</h1>
+                <h1 class="text-white mb-5">Lista de usuarios:</h1>
                 <div class="bg-light">
-                    <h2>Añadir Tarea</h2>
-                    <form method="post" action="/proyecto/nombreTarea">
+                    <h2>Añadir usuario</h2>
+                    <form method="post" action="/usuarios/nombreUsuario">
                         {{ csrf_field() }}
-                        <p>Introduzca nombre de tarea:</p>
-                        <input type="text" name="nombreTarea">
+                        <p>Introduzca nombre de usuario:</p>
+                        <input type="text" name="nombreUsuario">
+                        <p>Introduzca apellido</p>
+                        <input type="text" name="apellido">
                         <button>Enviar</button>
                     </form>
                 </div>
@@ -27,13 +29,15 @@
                     <table class="table table-stripped">
                         <tr>
                             <td><b>Nombre</b></td>
+                            <td><b>Apellido</b></td>
                             <td><b>Eliminar</b></td>
-                            @if(count($tareas) > 0)
-                            @foreach($tareas as $tarea)
+                            @if(count($usuarios) > 0)
+                            @foreach($usuarios as $usuario)
                         <tr>
-                            <td>{{ $tarea->nombreTarea }}</td>
+                            <td>{{ $usuario->nombreUsuario }}</td>
+                            <td>{{ $usuario->apellido }}</td>
                             <td>
-                                <form method="POST" action="/proyecto/{{$tarea->id}}">
+                                <form method="POST" action="/usuarios/{{$usuario->id}}">
                                     {{ @csrf_field() }}
                                     @method('delete')
                                     <input type="submit" style="background-color:red;" value="X" />
