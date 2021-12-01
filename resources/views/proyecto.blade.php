@@ -18,6 +18,17 @@
                         {{ csrf_field() }}
                         <p>Introduzca nombre de tarea:</p>
                         <input type="text" name="nombreTarea">
+                        <p>Seleccione usuario</p>
+                        
+                        <p>Escoge usuario:</p>
+
+                        @if(count($usuarios) > 0)
+                            @foreach($usuarios as $usuario)
+                        <tr>
+                            <td>{{ $usuario->id }}</td>
+                        </tr>
+                        @endforeach
+                        @endif
                         <button>Enviar</button>
                     </form>
                 </div>

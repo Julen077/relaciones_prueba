@@ -9,7 +9,7 @@ class Tareas extends Model
 {
     use HasFactory;
     protected $fillable = [
-        "nombreTarea"
+        "nombreTarea", "usuario_id"
     ];
         
 }
