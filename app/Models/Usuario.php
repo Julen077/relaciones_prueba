@@ -11,4 +11,12 @@ class Usuario extends Model
     protected $fillable = [
         "nombreUsuario", "apellido",
     ];
+    public function tareas(){
+        return $this->hasMany('App\Models\Tareas');
+
+        $tareas = Tareas::find(1)->tareas;
+        foreach ($tareas as $tarea) {
+        //
+        }
+    }
 }

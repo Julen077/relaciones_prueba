@@ -24,7 +24,7 @@
                 <br>
                 <div class="bg-light">
                     <h2>Lista de Task</h2>
-                    <table class="table table-stripped">
+                    <table class="table table-striped">
                         <tr>
                             <td><b>Nombre</b></td>
                             <td><b>Eliminar</b></td>
