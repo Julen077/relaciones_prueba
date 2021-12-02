@@ -10,7 +10,7 @@
 <body style="background-color: grey;">
     <div class="container bg-dark">
         <div class="row">
-            <div class="col-6 text-center" style="margin-left: 325px;">
+            <div class="col-8 text-center" style="margin-left: 225px;">
                 <h1 class="text-white mb-5">Lista de tareas:</h1>
                 <div class="bg-light">
                     <h2>Añadir Tarea</h2>
@@ -18,17 +18,18 @@
                         {{ csrf_field() }}
                         <p>Introduzca nombre de tarea:</p>
                         <input type="text" name="nombreTarea">
-                        <p>Seleccione usuario</p>
                         
                         <p>Escoge usuario:</p>
-
+                        <select name="usuario_id">
                         @if(count($usuarios) > 0)
                             @foreach($usuarios as $usuario)
                         <tr>
-                            <td>{{ $usuario->id }}</td>
+                            <option value="{{$usuario->id}}">{{ $usuario->nombreUsuario }}</option>
                         </tr>
                         @endforeach
                         @endif
+                            
+                        </select>
                         <button>Enviar</button>
                     </form>
                 </div>
@@ -38,11 +39,13 @@
                     <table class="table table-striped">
                         <tr>
                             <td><b>Nombre</b></td>
+                            <td><b>Id del usuario</b></td>
                             <td><b>Eliminar</b></td>
                             @if(count($tareas) > 0)
                             @foreach($tareas as $tarea)
                         <tr>
                             <td>{{ $tarea->nombreTarea }}</td>
+                            <td>{{ $tarea->usuario_id }}</td>
                             <td>
                                 <form method="POST" action="/proyecto/{{$tarea->id}}">
                                     {{ @csrf_field() }}

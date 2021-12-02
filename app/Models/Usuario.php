@@ -14,9 +14,9 @@ class Usuario extends Model
     public function tareas(){
         return $this->hasMany('App\Models\Tareas');
 
-        $tareas = Tareas::find(1)->tareas;
+        /*$tareas = Tareas::find(1)->tareas;
         foreach ($tareas as $tarea) {
         //
-        }
+        }*/
     }
 }
