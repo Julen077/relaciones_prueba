@@ -28,12 +28,14 @@
                     <h2>Lista de Task</h2>
                     <table class="table table-striped">
                         <tr>
+                            <td><b>ID</b></td>
                             <td><b>Nombre</b></td>
                             <td><b>Apellido</b></td>
                             <td><b>Eliminar</b></td>
                             @if(count($usuarios) > 0)
                             @foreach($usuarios as $usuario)
                         <tr>
+                            <td>{{ $usuario->id }}</td>
                             <td>{{ $usuario->nombreUsuario }}</td>
                             <td>{{ $usuario->apellido }}</td>
                             <td>

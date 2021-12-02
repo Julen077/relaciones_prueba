@@ -9,11 +9,18 @@
   50%  {background-color:blue; left:900px; top:200px;}
   75%  {background-color:green; left:0px; top:200px;}
   100% {background-color:red; left:0px; top:0px;}
+
 }
+    body{
+      background-image: url(https://i.pinimg.com/originals/ee/f5/67/eef56742ec0dd6abd4b78f6e582f1d98.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+    }
 </style>
 </head>
 <body>
-    <div class="container bg-dark" style="height: 900px;">
+    <div class="container bg-dark" style="height: 200px;">
         <div class="row">
             <div class="col-12 text-center text-white">
                 <h2 class="p-4">Selecciona metodo</h2>
