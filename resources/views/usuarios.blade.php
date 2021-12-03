@@ -25,7 +25,7 @@
                 </div>
                 <br>
                 <div class="bg-light">
-                    <h2>Lista de Task</h2>
+                    <h2>Lista de usuarios</h2>
                     <table class="table table-striped">
                         <tr>
                             <td><b>ID</b></td>
